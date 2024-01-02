@@ -140,6 +140,7 @@ namespace Assignment
             DataTable dt2 = new DataTable();
             NpgsqlDataAdapter adpt = new NpgsqlDataAdapter(cmd);
             adpt.Fill(dt2);
+            npgsqlConnection.Close();
             int TotalCount=dt2.Rows.Count;
             return TotalCount;
         }
@@ -150,7 +151,7 @@ namespace Assignment
                 using(NpgsqlConnection conn =this.RetryGetConnectionAsync()){
                     using (NpgsqlTransaction transaction = conn.BeginTransaction()){
                         try{
-                            using (var importText = conn.BeginTextImport("COPY \""+ "public" +"\".\"" + table + "\" (\"notificationtype\",\"serverid\",\"messagestream\",\"messageid\",\"tag\",\"recipient\",\"deliveryat\",\"details\",\"tolist\",\"cc\",\"bcc\",\"recipients\",\"subject\",\"fromcolumn\",\"status\",\"messageevents\")FROM STDIN WITH DELIMITER AS '\x7F' NULL AS ''")){
+                            using (var importText = conn.BeginTextImport("COPY \""+ "public" +"\".\"" + table + "\" (\"notificationtype\",\"serverid\",\"messagestream\",\"messageid\",\"tag\",\"recipient\",\"deliveryat\",\"details\",\"tolist\",\"cc\",\"bcc\",\"recipients\",\"subject\",\"fromcolumn\",\"status\",\"messageevents\")FROM STDIN WITH DELIMITER AS '\x7F' NULL AS '' ")){
                                 foreach(DataRow row in dataTable.Rows){
                                     string line= string.Empty;
                                     for(int i=0;i<dataTable.Columns.Count;i++){
@@ -168,9 +169,6 @@ namespace Assignment
                                 }
                             }
                             flag=true;
-                            int totalcount=SuccessOrFailure();
-                            System.Console.WriteLine("Total data inserted : "+totalcount);
-                            System.Console.WriteLine("Build Success");
                         }catch(Exception e){    
                             var exceptionData=e.Data.Cast<DictionaryEntry>().Where(temp=>temp.Key is string && temp.Value is object).ToDictionary(temp=>(string)temp.Key , temp =>(object)temp.Value);
                             string exceptionPrint=string.Empty;
