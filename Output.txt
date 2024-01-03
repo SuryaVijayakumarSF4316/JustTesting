@@ -1,0 +1,90 @@
+insert into Userdetails(userName,Age,Checkin)
+                            values(@name,@age,@entry)
+                            on conflict(userName,Age,Checkin) do update
+                            set userName=excluded.userName,
+                                Age=excluded.Age,
+                                Checkin=excluded.Checkin
+5/1/2023 12:00:00 AM-12/11/2023 12:00:00 AM
+Success
+-----------------------------------------------------------
+insert into Userdetails(userName,Age,Checkin)
+                            values(@name,@age,@entry)
+                            on conflict(userName,Age,Checkin) do update
+                            set userName=excluded.userName,
+                                Age=excluded.Age,
+                                Checkin=excluded.Checkin
+5/1/2023 12:00:00 AM-12/11/2023 12:00:00 AM
+Success
+-----------------------------------------------------------
+insert into Userdetails(userName,Age,Checkin)
+                            values(@name,@age,@entry)
+                            on conflict(userName,Age,Checkin) do update
+                            set userName=excluded.userName,
+                                Age=excluded.Age,
+                                Checkin=excluded.Checkin
+5/1/2023 12:00:00 AM-12/11/2023 12:00:00 AM
+Success
+-----------------------------------------------------------
+insert into Userdetails(userName,Age,Checkin)
+                            values(@name,@age,@entry)
+                            on conflict(userName,Age,Checkin) do update
+                            set userName=excluded.userName,
+                                Age=excluded.Age,
+                                Checkin=excluded.Checkin
+5/1/2023 12:00:00 AM-12/11/2023 12:00:00 AM
+Success
+-----------------------------------------------------------
+insert into Userdetails(userName,Age,Checkin)
+                            values(@name,@age,@entry)
+                            on conflict(userName,Age,Checkin) do update
+                            set userName=excluded.userName,
+                                Age=excluded.Age,
+                                Checkin=excluded.Checkin
+5/1/2023 12:00:00 AM-12/11/2023 12:00:00 AM
+Success
+-----------------------------------------------------------
+insert into Userdetails(userName,Age,Checkin)
+                            values(@name,@age,@entry)
+                            on conflict(userName,Age,Checkin) do update
+                            set userName=excluded.userName,
+                                Age=excluded.Age,
+                                Checkin=excluded.Checkin
+5/1/2023 12:00:00 AM-12/11/2023 12:00:00 AM
+Success
+-----------------------------------------------------------
+insert into Userdetails(userName,Age,Checkin)
+                            values(@name,@age,@entry)
+                            on conflict(userName,Age,Checkin) do update
+                            set userName=excluded.userName,
+                                Age=excluded.Age,
+                                Checkin=excluded.Checkin
+5/1/2023 12:00:00 AM-12/11/2023 12:00:00 AM
+Success
+-----------------------------------------------------------
+insert into Userdetails(userName,Age,Checkin)
+                            values(@name,@age,@entry)
+                            on conflict(userName,Age,Checkin) do update
+                            set userName=excluded.userName,
+                                Age=excluded.Age,
+                                Checkin=excluded.Checkin
+5/1/2023 12:00:00 AM-12/11/2023 12:00:00 AM
+Success
+-----------------------------------------------------------
+insert into Userdetails(userName,Age,Checkin)
+                            values(@name,@age,@entry)
+                            on conflict(userName,Age,Checkin) do update
+                            set userName=excluded.userName,
+                                Age=excluded.Age,
+                                Checkin=excluded.Checkin
+5/1/2023 12:00:00 AM-12/11/2023 12:00:00 AM
+Success
+-----------------------------------------------------------
+insert into Userdetails(userName,Age,Checkin)
+                            values(@name,@age,@entry)
+                            on conflict(userName,Age,Checkin) do update
+                            set userName=excluded.userName,
+                                Age=excluded.Age,
+                                Checkin=excluded.Checkin
+5/1/2023 12:00:00 AM-12/11/2023 12:00:00 AM
+Success
+-----------------------------------------------------------
